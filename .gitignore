@@ -38,3 +38,19 @@ build/
 
 # --- VS Code ---
 .vscode/
+
+# --- CUSTOM UPDATES (Added by Gemini) ---
+# Ignore the Java crash logs (hs_err_pid) that appeared in your project
+hs_err_pid*
+replay_pid*
+
+# Ignore general log files
+*.log
+
+# Ignore local environment/properties files if you create them
+.env
+application-local.properties
+
+# Ignore OS metadata
+.DS_Store
+Thumbs.db
