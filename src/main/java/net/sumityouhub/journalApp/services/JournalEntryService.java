@@ -8,8 +8,6 @@ import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
-
-import javax.management.RuntimeErrorException;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
@@ -31,11 +29,10 @@ public class JournalEntryService {
             journalEntry.setDate(LocalDateTime.now());
             JournalEntry saved = journalEntryRepository.save(journalEntry);
             user.getJournalEntries().add(saved);
-            user.setUserName(null);
             userService.saveEntry(user);
         }catch(Exception e) {
             System.out.println(e);
-            throw new RuntimeException("An error occurred when saving the entry" + e);
+            throw new RuntimeException("An error occurred when saving the entry", e);
         }
     }
 
