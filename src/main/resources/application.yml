@@ -1,0 +1,6 @@
+spring:
+  data:
+    mongodb:
+      uri: ${MONGO_URI:mongodb://localhost:27017}
+      database: journaldb
+      auto-index-creation: true

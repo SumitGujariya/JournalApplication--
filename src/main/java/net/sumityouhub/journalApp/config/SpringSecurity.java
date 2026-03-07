@@ -26,8 +26,8 @@ public class SpringSecurity {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.authorizeHttpRequests(request -> request
                         .requestMatchers("/public/**", "/user/**").permitAll()
-                        .requestMatchers("/journal/**").authenticated()
-                        .anyRequest().authenticated())
+                        .requestMatchers("/admin/**").hasRole("ADMIN")
+                        .anyRequest().permitAll())
                 .httpBasic(Customizer.withDefaults())
                 .csrf(AbstractHttpConfigurer::disable)
                 .build();
