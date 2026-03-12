@@ -4,6 +4,8 @@ import lombok.extern.slf4j.Slf4j;
 import net.sumityouhub.journalApp.entity.User;
 import net.sumityouhub.journalApp.repository.UserRepository;
 import org.bson.types.ObjectId;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -21,6 +23,8 @@ public class UserService {
 
     private static final PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
+//    private static final Logger logger = LoggerFactory.getLogger(UserService.class);
+
     public boolean saveNewUser(User user) {
         try {
             user.setPassword(passwordEncoder.encode(user.getPassword()));
@@ -28,6 +32,12 @@ public class UserService {
             userRepository.save(user);
             return true;
         } catch (Exception e) {
+//            log.error("Error occurred for {} :",user.getUserName(), e);
+            log.error("hlww!!");
+            log.warn("hlww!!");
+            log.info("hlww!!");
+            log.trace("hlww!!");
+            log.debug("hlww!!");
             return false;
         }
     }
