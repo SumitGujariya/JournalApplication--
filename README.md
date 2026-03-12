@@ -1,31 +1,31 @@
 JournalApplication
-Journal Application API
+# Journal Application 📓
 
-A backend REST API built using Spring Boot for managing personal journal entries.  
-The application allows users to create, retrieve, update, and delete journal entries through structured REST endpoints.
+A robust RESTful API built with Spring Boot for managing personal journal entries. This project features a clean layered architecture and integrated security.
 
 ## Features
 
-- Create journal entries
-- Retrieve all journal entries
-- Update existing journal entries
-- Delete journal entries
-- Clean layered backend architecture (Controller → Service → Repository)
+- User Authentication: Secure signup and login using Spring Security.
+- Journal Management: Full CRUD operations (Create, Read, Update, Delete) for journal entries.
+- Role-Based Access: Specialized endpoints for Users and Admins.
+- Encrypted Passwords: Uses Bcrypt hashing for user security.
+- Layered Architecture: Organized into Controller, Service, and Repository layers for scalability.
 
 ## Tech Stack
 
 Backend
-- Java
-- Spring Boot
-- Spring Data JPA
+- Java 25
+- Spring Boot 3.5.x
+- Spring Security
+- Spring Data MongoDB
 
 Database
-- MongoDB
+- MongoDB Atlas (Cloud)
 
 Tools
-- Maven
+- Maven (Build Tool)
+- Postman (API Testing)
 - Git
-- Postman
 
 Project Structure
 
@@ -62,6 +62,7 @@ cd JournalApplication--
 Run the application
 
 ```bash
+mvn clean install
 mvn spring-boot:run
 ```
 
