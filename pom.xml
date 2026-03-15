@@ -18,6 +18,8 @@
 		<sonar.projectKey>journalApp</sonar.projectKey>
 		<sonar.host.url>http://localhost:9000</sonar.host.url>
 		<sonar.token>squ_2ad838f8d3a37f0320bc0c4c666b9be61e8fa89c</sonar.token>
+		<sonar.organization>sumit-youhub</sonar.organization>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 	</properties>
 
 	<dependencies>
