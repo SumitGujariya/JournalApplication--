@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Component
+@Slf4j
 public class JournalEntryService {
 
     @Autowired
@@ -57,7 +58,7 @@ public class JournalEntryService {
                 journalEntryRepository.deleteById(id);
             }
             } catch (Exception e){
-                System.out.println(e);
+                log.error("Error", e);
                 throw new RuntimeException("An error occurred when deleting the entry", e);
             }
             return removed;

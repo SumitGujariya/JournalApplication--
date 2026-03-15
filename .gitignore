@@ -18,13 +18,14 @@ target/
 .settings
 .springBeans
 .sts4-cache
+*.yml
 
 # --- IntelliJ IDEA ---
 .idea/
 *.iws
 *.iml
 *.ipr
-out/
+out/w
 
 # --- NetBeans ---
 /nbproject/private/
