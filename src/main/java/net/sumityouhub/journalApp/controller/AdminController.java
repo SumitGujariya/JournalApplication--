@@ -1,6 +1,7 @@
 package net.sumityouhub.journalApp.controller;
 
 
+import net.sumityouhub.journalApp.cache.AppCache;
 import net.sumityouhub.journalApp.entity.User;
 import net.sumityouhub.journalApp.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,9 @@ public class AdminController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private AppCache appCache;
+
     @GetMapping("/all-users")
     public ResponseEntity<?> getAllUsers() {
         List<User> all = userService.getAll();
@@ -31,4 +35,8 @@ public class AdminController {
         userService.saveAdmin(user);
     }
 
+    @GetMapping("clear-app-cache")
+    public void clearAppCache() {
+        appCache.init();
+    }
 }
