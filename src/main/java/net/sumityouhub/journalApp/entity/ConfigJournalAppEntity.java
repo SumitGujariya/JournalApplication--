@@ -1,13 +1,12 @@
 package net.sumityouhub.journalApp.entity;
 
-import lombok.Builder;
 import lombok.Data;
-import lombok.NonNull;
+import lombok.NoArgsConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "config_journal_app")
 @Data
-@Builder
+@NoArgsConstructor
 public class ConfigJournalAppEntity {
 
     private String key;
