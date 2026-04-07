@@ -1,4 +1,4 @@
-package net.sumityouhub.journalApp.service;
+package net.sumityouhub.journalApp.cron;
 
 import net.sumityouhub.journalApp.scheduler.UserScheduler;
 import org.junit.jupiter.api.Test;
